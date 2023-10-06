@@ -1,0 +1,12 @@
+.switchSearch {
+ font-style: italic; 
+ font-weight: bold;
+ margin-right: 3px;
+ margin-left: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .searchSwitch:hover {
+    cursor: pointer;
+}
+}
