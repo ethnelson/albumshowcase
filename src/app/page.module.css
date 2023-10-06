@@ -1,29 +1,15 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: .3rem;
   min-height: 100vh;
 }
 
-/* Enable hover only on non-touch devices */
-/*
-@media (hover: hover) and (pointer: fine) {
-
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-*/
-
-/* Mobile */
-/* 
-@media (max-width: 700px) {
-
-}
-*/
-
-/* Tablet and Smaller Desktop */
-/*
-@media (min-width: 701px) and (max-width: 1120px) {
-
-}
-*/

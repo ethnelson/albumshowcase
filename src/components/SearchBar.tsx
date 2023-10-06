@@ -6,7 +6,6 @@ export default function SearchBar(props:{ onSubmit:any }) {
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [searchType, setSearchType] = useState<boolean>(false)
 
-
   let handleSubmit = (e:any) => {
     e.preventDefault();
     props.onSubmit(searchType, searchTerm);
@@ -23,8 +22,8 @@ export default function SearchBar(props:{ onSubmit:any }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input 
+      <form className={styles.searchBarForm} onSubmit={handleSubmit}>
+        <input className={styles.searchBar}
           name='search'
           id='search'
           type='string'
@@ -35,8 +34,7 @@ export default function SearchBar(props:{ onSubmit:any }) {
       </form>
       <p>
       Know the {searchType ? 'album' : 'photo'} number? Use 
-      <button className={styles.switchSearch} onClick={handleSearchTypeChange}>this</button> 
-      instead!
+      <button className={styles.switchSearch} onClick={handleSearchTypeChange}><h3>this!</h3></button>
       </p>
   </>
   )

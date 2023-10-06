@@ -12,28 +12,27 @@ export default function AlbumApp() {
   const [content, setContent] = useState<Array<Photo>>(new Array<Photo>)
   const [bigPhoto, setBigPhoto] = useState<Photo>(defaultPhoto)
   const [showBigPhoto, setShowBigPhoto] = useState<boolean>(false)
+  const [showAlbum, setShowAlbum] = useState<boolean>(false)
   
   async function fetchData(searchType:boolean, searchTerm:string) {
     if (searchTerm !== null) {
       let type = searchType ? 'id' : 'albumId'
       let requestPoint = `https://jsonplaceholder.typicode.com/photos?${type}=${searchTerm}`
-      console.log(requestPoint)
 
       await fetch(requestPoint)
         .then((res) => res.json())
         .then((data) => {
         setContent(data)
+        setShowAlbum(true)
         resetPhotoSpotlight()
         })
     } else {
       setContent(new Array<Photo>)
+      setShowAlbum(false)
     }
   }
 
   const showPhoto = (photoObj:Photo) => {
-    console.log(photoObj)
-    console.log(showBigPhoto)
-
     setBigPhoto(photoObj)
     if (photoObj === bigPhoto) {
       resetPhotoSpotlight()
@@ -54,8 +53,8 @@ export default function AlbumApp() {
         <SearchBar onSubmit={fetchData} />
       </header>
       <main className={styles.main}>
-        <LoadContent content={content} onClickPhoto={showPhoto}/>
-        {showBigPhoto && <PhotoFull photoObj={bigPhoto} />}
+        { showAlbum && <LoadContent content={content} onClickPhoto={showPhoto}/> }
+        { showBigPhoto && <PhotoFull photoObj={bigPhoto} /> }
       </main>
     </>
   )

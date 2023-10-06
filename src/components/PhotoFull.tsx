@@ -4,19 +4,22 @@ import Photo from '@/utilities/PhotoObject'
 import styles from './PhotoFull.module.css'
 
 export default function PhotoFull(props:{photoObj:Photo}) {
-
+  
   return (
-    <div className={styles.PhotoContainer}> 
+    <div className={styles.photoInfo}> 
       <h2>{props.photoObj.title}</h2>
-      <Image
-        src={props.photoObj.url} 
-        width={600} 
-        height={600}
-        alt={props.photoObj.title}  />
-      <h2>Photo Information</h2>
+      <div className={styles.photoContainer}>
+        <Image
+          src={props.photoObj.url}
+          fill
+          alt={props.photoObj.title}
+          priority />
+      </div>
+      <hr/>
+      <h3>Photo Information</h3>
       <ul>
-        <li>Album #: {props.photoObj.albumId}</li>
-        <li>Photo #: {props.photoObj.id}</li>
+        <p>Album #: {props.photoObj.albumId}</p>
+        <p>Photo #: {props.photoObj.id}</p>
       </ul>
     </div>
   )

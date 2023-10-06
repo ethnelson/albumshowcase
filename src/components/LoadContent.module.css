@@ -1,5 +1,38 @@
+.albumContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content:space-between
+}
+
+.arrow {
+  margin-right: .2rem;
+  margin-left: .2rem;
+}
+
 .album {
   display: flex;
   flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+  max-width: 90%;
+  gap: 1rem;
   
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.photoContainer {
+  display: flex;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  width: 102px;
+  height: 102px;
+}
+
+.album::-webkit-scrollbar {
+  display: none;
 }

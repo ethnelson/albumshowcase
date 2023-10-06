@@ -1,0 +1,49 @@
+.photoInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.photoInfo h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.photoInfo h3 {
+  width: 100%;
+  text-align: left;
+}
+
+.photoInfo ul {
+  width:100%;
+}
+.photoInfo hr {
+  color: white;
+  width: 100%;
+  border-width: 1px;
+
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.photoContainer {
+  position: relative;
+  width: 80vw;
+  height: 80vw;
+
+}
+
+@media (min-width: 576px) {
+  .photoContainer {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .photoContainer {
+    width: 600px;
+    height: 600px;
+  }
+}
