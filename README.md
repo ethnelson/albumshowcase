@@ -1,5 +1,5 @@
 # Tech Showcase: Albums
-This is a UI application created with the Next.JS framework with React, Typescript, and Bootstrap.
+This is a UI application created with the Next.JS framework with React, Typescript.
 
 ## How to run
 1. Clone the repository: `https://github.com/ethnelson/albumshowcase`
@@ -9,6 +9,7 @@ This is a UI application created with the Next.JS framework with React, Typescri
 
 ## Running in Dev mode
 1. run `npm run dev` in the console
+2. View at [http://localhost:3000](http://localhost:3000)
 
 
 ## More About this UI Application
